@@ -11,5 +11,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url(./img/fundo2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
