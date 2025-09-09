@@ -1,6 +1,6 @@
 import api from "./api"
 
-export const getCuriosidades = async () => {
+export const getAno = async () => {
     const response = await api.get('/random/year')
 
     if(response.status !== 200) {
