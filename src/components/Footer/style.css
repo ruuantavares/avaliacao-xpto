@@ -1,6 +1,10 @@
 footer {
-    background-color: #6b8d06;
-    color: white;
+    background-color: #01575e;
     text-align: center;
-    padding: 0.5em;
+    padding: 16px;
+    color: #fff;
+    font-size: 16px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
