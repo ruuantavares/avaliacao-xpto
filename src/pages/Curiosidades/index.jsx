@@ -2,23 +2,19 @@ import "./style.css";
 import { useEffect, useState } from "react";
 import { getCuriosidades } from "../../api/curiosidades";
 import { Link } from "react-router-dom";
+import axios from "axios";
+
 
 function Curiosidades() {
-  const [conteudo, setConteudo] = useState(<>....</>);
-  async function TransformaEmLista() {
-    const curiosidades = await getCuriosidades();
+  const [conteudo, setConteudo] = useState("Carregando...");
 
-    return curiosidades.map((curiosidades) => (
-      <div className="curiosidades" key={curiosidades.Curiosidades}>
-        <h2>{curiosidades}</h2>
-      </div>
-    ));
+  async function getCuriosidadeAleatoria() {
+    const resposta = await getCuriosidades();
+    setConteudo(resposta);
   }
+
   useEffect(() => {
-    async function Carregar() {
-      setConteudo(await TransformaEmLista());
-    }
-    Carregar();
+    getCuriosidadeAleatoria();
   }, []);
 
   return (
@@ -28,7 +24,13 @@ function Curiosidades() {
           <button>Home</button>
         </Link>
       </nav>
-      <div className="lista-principal">{conteudo}</div>
+
+      <div className="lista-principal">
+        <h2>{conteudo}</h2>
+        <button onClick={getCuriosidadeAleatoria}>
+          Sortear número
+        </button>
+      </div>
     </main>
   );
 }
