@@ -18,16 +18,16 @@ function Curiosidades() {
   }, []);
 
   return (
-    <main>
+    <main className="main-curi">
       <nav>
         <Link to="/">
-          <button>Home</button>
+          <button className="btn-curi">Voltar</button>
         </Link>
       </nav>
 
       <div className="lista-principal">
-        <h2>{conteudo}</h2>
-        <button onClick={getCuriosidadeAleatoria}>
+        <h2 className="h2-curi">{conteudo}</h2>
+        <button onClick={getCuriosidadeAleatoria} className="btn-curi">
           Sortear número
         </button>
       </div>
