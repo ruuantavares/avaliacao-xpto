@@ -2,7 +2,7 @@ import "./style.css";
 import { useEffect, useState } from "react";
 import { getCuriosidades } from "../../api/curiosidades";
 import { Link } from "react-router-dom";
-import axios from "axios";
+
 
 
 function Curiosidades() {

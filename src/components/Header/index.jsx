@@ -2,11 +2,11 @@ import './style.css'
 import { Link } from 'react-router-dom'
 
 
-export default function Header(){
+export default function Header( {titulo}){
     return (
         <>
         <header>
-        <h1>Curiosidades Sobre Numeros</h1>
+        <h1>{titulo ? titulo : 'Curiosidade sobre números'}</h1>
 
         </header>
         </>
