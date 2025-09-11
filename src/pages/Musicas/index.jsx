@@ -17,6 +17,7 @@ export default function Musicas() {
             <h2>
               Clique no Play e descubra a prévia das melhores musicas do mundo.
             </h2>
+           <div className="div-music">
             <iframe
               data-testid="embed-iframe"
               src="https://open.spotify.com/embed/playlist/37i9dQZEVXbNG2KDcFcKOF?utm_source=generator&theme=0"
@@ -26,6 +27,7 @@ export default function Musicas() {
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
               loading="lazy"
             ></iframe>
+            </div> 
           </div>
         </section>
       </main>

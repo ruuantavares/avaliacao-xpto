@@ -2,6 +2,7 @@ import "./style.css";
 import { useEffect, useState } from "react";
 import { getCuriosidades } from "../../api/curiosidades";
 import { Link } from "react-router-dom";
+import Header from "../../components/Header";
 
 
 
@@ -18,6 +19,8 @@ function Curiosidades() {
   }, []);
 
   return (
+    <>
+      <Header />
     <main className="main-curi">
       <nav>
         <Link to="/">
@@ -32,6 +35,7 @@ function Curiosidades() {
         </button>
       </div>
     </main>
+    </>
   );
 }
 
